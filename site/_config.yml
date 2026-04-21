@@ -1,0 +1,16 @@
+title: J2S Inserts
+description: Inserts 3D pour jeux de société
+baseurl: ""
+url: "https://ton-compte.github.io"
+
+collections:
+  products:
+    output: true
+    permalink: /produits/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: product

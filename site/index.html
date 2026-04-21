@@ -1,0 +1,23 @@
+---
+layout: default
+title: Accueil
+description: Inserts 3D pour jeux de société.
+---
+
+<h1>J2S Inserts</h1>
+<p>Range mieux. Installe plus vite. Joue davantage.</p>
+
+{% assign sorted_products = site.products | sort: "title" %}
+
+<section>
+  <h2>À découvrir</h2>
+
+  {% for product in sorted_products limit: 3 %}
+    <article>
+      <a href="{{ product.url }}">
+        <h3>{{ product.title }}</h3>
+      </a>
+      <p>{{ product.description }}</p>
+    </article>
+  {% endfor %}
+</section>

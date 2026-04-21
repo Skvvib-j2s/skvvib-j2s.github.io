@@ -1,0 +1,10 @@
+<article class="product-card">
+  <a href="{{ include.product.url }}">
+    {% if include.product.image %}
+      <img src="{{ include.product.image }}" alt="{{ include.product.title }}" width="400" height="300" loading="lazy">
+    {% endif %}
+    <h2>{{ include.product.title }}</h2>
+  </a>
+  <p>{{ include.product.description }}</p>
+  <p>{{ include.product.prix }} €</p>
+</article>

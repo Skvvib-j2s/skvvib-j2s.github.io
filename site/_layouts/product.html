@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="product-page">
+  <h1>{{ page.title }}</h1>
+
+  {% if page.image %}
+    <img src="{{ page.image }}" alt="{{ page.title }}" width="800" height="600">
+  {% endif %}
+
+  <p><strong>Prix :</strong> {{ page.prix }} €</p>
+  <p><strong>Catégorie :</strong> {{ page.categorie }}</p>
+  <p><strong>Matériau :</strong> {{ page.materiau }}</p>
+
+  {% if page.compatible %}
+    <p><strong>Compatible :</strong> {{ page.compatible }}</p>
+  {% endif %}
+
+  <div>
+    {{ content }}
+  </div>
+</article>

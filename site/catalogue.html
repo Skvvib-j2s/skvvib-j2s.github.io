@@ -1,0 +1,12 @@
+---
+layout: default
+title: Catalogue
+description: Tous les inserts J2S classés par ordre alphabétique.
+---
+
+<h1>Catalogue</h1>
+
+{% assign sorted_products = site.products | sort: "title" %}
+{% for product in sorted_products %}
+  {% include product-card.html product=product %}
+{% endfor %}
