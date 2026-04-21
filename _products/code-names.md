@@ -5,10 +5,10 @@ prix: 4
 categorie: Ambiance / réflexion
 materiau: PETG
 image: /assets/images/code_names/insert_code_names.jpg
-gallery:
-  - /assets/images/code_names/01.webp
-  - /assets/images/code_names/02.webp
-  - /assets/images/code_names/03.webp
+# gallery:
+#   - /assets/images/code_names/01.webp
+#   - /assets/images/code_names/02.webp
+#   - /assets/images/code_names/03.webp
 compatible: Boîte de base
 tags:
   - PETG
