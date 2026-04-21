@@ -1,7 +1,7 @@
 title: J2S Inserts
-description: Inserts 3D pour jeux de société
-baseurl: "/site"
+description: Inserts imprimés en 3D pour jeux de société
 url: "https://skvvib-j2s.github.io"
+baseurl: "/site"
 
 collections:
   products:
