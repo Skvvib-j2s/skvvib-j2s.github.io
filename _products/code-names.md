@@ -1,5 +1,5 @@
 ---
-title: Insert 3D compatible Code Names
+title: Code Names
 description: Insert 3D compatible avec le jeu Code Names, avec rangement optimisé et setup plus rapide.
 prix: 4
 categorie: Ambiance / réflexion
