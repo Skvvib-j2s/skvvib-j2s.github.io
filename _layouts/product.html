@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="product-page">
-  <h1 style="text-align: center;">{{ page.title }}</h1>
+  <h1>{{ page.title }}</h1>
 
   {% if page.gallery %}
     <div class="product-gallery">
@@ -17,7 +17,6 @@ layout: default
     </div>
   {% elsif page.image %}
     <img
-      style="border-radius: 10px;"
       src="{{ page.image | relative_url }}"
       alt="{{ page.title }}"
       width="800"

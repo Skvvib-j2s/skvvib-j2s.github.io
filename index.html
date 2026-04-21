@@ -25,13 +25,14 @@ description: Inserts 3D pour jeux de société.
 
   {% for product in sorted_products limit: 3 %}
     <article>
-      <a href="{{ product.url | relative_url }}">
+      <a style="text-align: center;" href="{{ product.url | relative_url }}">
         {{ product.title }}
         <img
-          src="{{ product.image | relative_url }}"
-          alt="{{ product.description }}"
-          width="200"
-          height="200">
+			style="border-radius: 10px;"
+			src="{{ product.image | relative_url }}"
+			alt="{{ product.description }}"
+			width="200"
+			height="200">
       </a>
       <!-- <p>{{ product.description }}</p> -->
     </article>
