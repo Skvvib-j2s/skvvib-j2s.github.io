@@ -14,7 +14,7 @@ description: Inserts 3D pour jeux de société.
 
   {% for product in sorted_products limit: 3 %}
     <article>
-      {% elsif page.image %}
+      {% if page.image %}
         <img
           src="{{ page.image | relative_url }}"
           alt="{{ page.title }}"
