@@ -9,7 +9,7 @@ description: Tous les inserts J2S classés par ordre alphabétique.
   <article>
     <a href="{{ product.url | relative_url }}">
       {% if product.image %}
-        <img src="{{ product.image | relative_url }}" alt="{{ product.title }}">
+        <img src="{{ product.image | relative_url }}" alt="{{ product.title }}" width="400" height="300" loading="lazy">
       {% endif %}
       <h2>{{ product.title }}</h2>
     </a>

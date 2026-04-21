@@ -3,21 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <header>
-    <a href="{{ '/' | relative_url }}">J2S Inserts</a>
-    <nav>
-      <a href="{{ '/' | relative_url }}">Accueil</a>
-      <a href="{{ '/catalogue.html' | relative_url }}">Catalogue</a>
-    </nav>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Accueil {{ site.title }}">
+        <span class="site-brand__mark" aria-hidden="true">J2S</span>
+        <span class="site-brand__text">{{ site.title }}</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul class="site-nav__list">
+          <li>
+            <a
+              href="{{ '/' | relative_url }}"
+              {% if page.url == '/' %}aria-current="page"{% endif %}>
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a
+              href="{{ '/catalogue.html' | relative_url }}"
+              {% if page.url == '/catalogue.html' %}aria-current="page"{% endif %}>
+              Catalogue
+            </a>
+          </li>
+          <li>
+            <a
+              href="{{ '/a-propos.html' | relative_url }}"
+              {% if page.url == '/a-propos.html' %}aria-current="page"{% endif %}>
+              À propos
+            </a>
+          </li>
+          <li>
+            <a
+              class="button button--small"
+              href="{{ '/contact.html' | relative_url }}">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    {{ content }}
+  <main id="main-content" class="site-main">
+    <div class="container">
+      {{ content }}
+    </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-title">{{ site.title }}</p>
+        <p class="footer-text">{{ site.description }}</p>
+      </div>
+
+      <nav aria-label="Navigation secondaire">
+        <ul class="footer-links">
+          <li><a href="{{ '/' | relative_url }}">Accueil</a></li>
+          <li><a href="{{ '/catalogue.html' | relative_url }}">Catalogue</a></li>
+          <li><a href="{{ '/a-propos.html' | relative_url }}">À propos</a></li>
+          <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

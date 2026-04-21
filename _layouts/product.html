@@ -4,8 +4,23 @@ layout: default
 <article class="product-page">
   <h1>{{ page.title }}</h1>
 
-  {% if page.image %}
-    <img src="{{ '/assets/images/ark-nova.webp' | relative_url }}" alt="{{ page.title }}" width="800" height="600">
+  {% if page.gallery %}
+    <div class="product-gallery">
+      {% for image in page.gallery %}
+        <img
+          src="{{ image | relative_url }}"
+          alt="{{ page.title }} - vue {{ forloop.index }}"
+          width="800"
+          height="600"
+          loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+      {% endfor %}
+    </div>
+  {% elsif page.image %}
+    <img
+      src="{{ page.image | relative_url }}"
+      alt="{{ page.title }}"
+      width="800"
+      height="600">
   {% endif %}
 
   <p><strong>Prix :</strong> {{ page.prix }} €</p>
