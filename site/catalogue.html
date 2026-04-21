@@ -4,9 +4,14 @@ title: Catalogue
 description: Tous les inserts J2S classés par ordre alphabétique.
 ---
 
-<h1>Catalogue</h1>
-
 {% assign sorted_products = site.products | sort: "title" %}
 {% for product in sorted_products %}
-  {% include product-card.html product=product %}
+  <article>
+    <a href="{{ product.url | relative_url }}">
+      {% if product.image %}
+        <img src="{{ product.image | relative_url }}" alt="{{ product.title }}">
+      {% endif %}
+      <h2>{{ product.title }}</h2>
+    </a>
+  </article>
 {% endfor %}

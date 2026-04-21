@@ -14,7 +14,7 @@ description: Inserts 3D pour jeux de société.
 
   {% for product in sorted_products limit: 3 %}
     <article>
-      <a href="{{ product.url }}">
+      <a href="{{ product.url | relative_url }}">{{ product.title }}</a>
         <h3>{{ product.title }}</h3>
       </a>
       <p>{{ product.description }}</p>

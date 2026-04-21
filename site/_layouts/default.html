@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
   <header>
-    <a href="/">J2S Inserts</a>
+    <a href="{{ '/' | relative_url }}">J2S Inserts</a>
     <nav>
-      <a href="/">Accueil</a>
-      <a href="/catalogue.html">Catalogue</a>
+      <a href="{{ '/' | relative_url }}">Accueil</a>
+      <a href="{{ '/catalogue.html' | relative_url }}">Catalogue</a>
     </nav>
   </header>
 
   <main>
     {{ content }}
   </main>
-
-  <footer>
-    <p>© 2026 J2S Inserts</p>
-  </footer>
 </body>
 </html>
