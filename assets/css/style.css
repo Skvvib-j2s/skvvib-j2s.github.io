@@ -401,6 +401,7 @@ button.button:hover {
 .product-card__title {
   margin: 0;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .product-card__meta {
