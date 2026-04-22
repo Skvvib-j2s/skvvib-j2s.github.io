@@ -4,7 +4,7 @@ description: Insert 3D compatible avec le jeu Nidavellir (sans extensions), avec
 prix: 4
 categorie: Ambiance / réflexion
 materiau: PETG
-image: /assets/images/code_names/01.jpg
+image: /assets/images/nidavellir/01.jpg
 # gallery:
 #   - /assets/images/code_names/01.webp
 #   - /assets/images/code_names/02.webp
