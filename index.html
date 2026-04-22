@@ -26,7 +26,7 @@ description: Inserts 3D pour jeux de société.
   {% for product in sorted_products limit: 3 %}
     <article>
       <a style="text-align: center;" href="{{ product.url | relative_url }}">
-        {{ product.title }}
+        <span style="text-align: center;">{{ product.title }}</span>
         <img
 			style="border-radius: 10px;"
 			src="{{ product.image | relative_url }}"
