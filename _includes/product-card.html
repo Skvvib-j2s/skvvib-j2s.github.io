@@ -1,4 +1,4 @@
-<article class="product-card">
+<!-- <article class="product-card">
   <a href="{{ include.product.url }}">
     {% if include.product.image %}
       <img src="{{ include.product.image }}" alt="{{ include.product.title }}" width="400" height="300" loading="lazy">
@@ -7,4 +7,53 @@
   </a>
   <p>{{ include.product.description }}</p>
   <p>{{ include.product.prix }} €</p>
+</article> -->
+
+<article class="product-card h-100">
+  <a class="text-decoration-none" href="{{ include.product.url | relative_url }}">
+    {% if include.product.image %}
+      <img
+        class="product-card__image"
+        src="{{ include.product.image | relative_url }}"
+        alt="{{ include.product.title }}"
+        width="640"
+        height="480"
+        loading="lazy">
+    {% endif %}
+  </a>
+
+  <div class="p-3 d-flex flex-column gap-3 h-100">
+    {% if include.product.categorie %}
+      <div>
+        <span class="badge rounded-pill text-bg-light">{{ include.product.categorie }}</span>
+      </div>
+    {% endif %}
+
+    <div>
+      <h2 class="h5 mb-2">
+        <a class="text-decoration-none text-white" href="{{ include.product.url | relative_url }}">
+          {{ include.product.title }}
+        </a>
+      </h2>
+
+      {% if include.product.description %}
+        <p class="text-secondary mb-0">{{ include.product.description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="d-flex flex-wrap gap-2">
+      {% if include.product.prix %}
+        <span class="badge rounded-pill text-bg-warning">{{ include.product.prix }} €</span>
+      {% endif %}
+      {% if include.product.materiau %}
+        <span class="badge rounded-pill text-bg-dark border">{{ include.product.materiau }}</span>
+      {% endif %}
+    </div>
+
+    <div class="mt-auto pt-2">
+      <a class="btn btn-primary rounded-pill" href="{{ include.product.url | relative_url }}">
+        Voir la fiche
+      </a>
+    </div>
+  </div>
 </article>

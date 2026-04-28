@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: default
 title: Catalogue
 description: Tous les inserts J2S classés par ordre alphabétique.
@@ -14,4 +14,30 @@ description: Tous les inserts J2S classés par ordre alphabétique.
       <h2>{{ product.title }}</h2>
     </a>
   </article>
-{% endfor %}
+{% endfor %} -->
+
+---
+layout: default
+title: Catalogue
+description: Découvrez tous les inserts J2S classés par ordre alphabétique.
+---
+
+<section class="py-4 py-lg-5">
+  <div class="mb-4">
+    <span class="eyebrow">Catalogue</span>
+    <h1 class="display-5 fw-bold mb-3">Tous les inserts</h1>
+    <p class="lead mb-0">
+      Des solutions de rangement pensées pour jouer plus vite et ranger mieux.
+    </p>
+  </div>
+
+  {% assign sorted_products = site.products | sort: "title" %}
+
+  <div class="row g-4">
+    {% for product in sorted_products %}
+      <div class="col-12 col-md-6 col-xl-4">
+        {% include product-card.html product=product %}
+      </div>
+    {% endfor %}
+  </div>
+</section>

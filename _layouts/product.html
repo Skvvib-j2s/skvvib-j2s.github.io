@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: default
 ---
 <article class="product-page">
@@ -32,6 +32,73 @@ layout: default
   {% endif %}
 
   <div>
+    {{ content }}
+  </div>
+</article> -->
+
+---
+layout: default
+---
+
+<article class="product-page py-4 py-lg-5">
+  <div class="product-hero">
+    <div>
+      {% if page.image %}
+        <div class="product-main-image">
+          <img
+            src="{{ page.image | relative_url }}"
+            alt="{{ page.title }}"
+            width="1200"
+            height="900">
+        </div>
+      {% endif %}
+
+      {% if page.gallery %}
+        <div class="product-gallery">
+          {% for image in page.gallery %}
+            <img
+              src="{{ image | relative_url }}"
+              alt="{{ page.title }} - vue {{ forloop.index }}"
+              width="800"
+              height="600"
+              loading="lazy">
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <aside class="product-summary">
+      {% if page.categorie %}
+        <span class="eyebrow">{{ page.categorie }}</span>
+      {% endif %}
+
+      <h1>{{ page.title }}</h1>
+
+      {% if page.description %}
+        <p class="lead">{{ page.description }}</p>
+      {% endif %}
+
+      <div class="product-meta">
+        {% if page.prix %}
+          <span class="price-badge">{{ page.prix }} €</span>
+        {% endif %}
+        {% if page.materiau %}
+          <span class="badge">{{ page.materiau }}</span>
+        {% endif %}
+        {% if page.compatible %}
+          <span class="badge">{{ page.compatible }}</span>
+        {% endif %}
+      </div>
+
+      {% if page.commande_url %}
+        <a class="btn btn-primary rounded-pill px-4" href="{{ page.commande_url }}">
+          Commander
+        </a>
+      {% endif %}
+    </aside>
+  </div>
+
+  <div class="product-content mt-4">
     {{ content }}
   </div>
 </article>

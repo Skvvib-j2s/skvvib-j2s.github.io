@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: default
 title: Accueil
 description: Inserts 3D pour jeux de société.
@@ -33,7 +33,69 @@ description: Inserts 3D pour jeux de société.
 				width="200"
 				height="200">
       	</a>
-      <!-- <p>{{ product.description }}</p> -->
     </article>
   {% endfor %}
+</section> -->
+
+---
+layout: default
+title: Accueil
+description: Inserts imprimés en 3D pour jeux de société.
+---
+
+<section class="py-5">
+  <div class="hero-panel p-4 p-lg-5">
+    <div class="row g-4 align-items-center">
+      <div class="col-12 col-lg-7">
+        <span class="eyebrow">Inserts 3D pour jeux de société</span>
+        <h1 class="display-4 fw-bold mb-3">Range mieux. Installe plus vite. Joue davantage.</h1>
+        <p class="lead mb-4">
+          Des inserts conçus pour fluidifier la mise en place, améliorer le rangement
+          et rendre chaque ouverture de boîte plus agréable.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a class="btn btn-primary btn-lg rounded-pill px-4" href="{{ '/catalogue.html' | relative_url }}">
+            Voir le catalogue
+          </a>
+          <a class="btn btn-outline-light btn-lg rounded-pill px-4" href="{{ '/contact.html' | relative_url }}">
+            Demande sur mesure
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="j2s-panel p-4">
+          <h2 class="h4 mb-3">Pourquoi un insert ?</h2>
+          <ul class="mb-0 text-secondary">
+            <li>Mise en place plus rapide</li>
+            <li>Boîte mieux organisée</li>
+            <li>Transport plus propre</li>
+            <li>Expérience plus satisfaisante</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-4 py-lg-5">
+  <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+    <div>
+      <span class="eyebrow">À découvrir</span>
+      <h2 class="display-6 fw-bold mb-0">Les premiers inserts</h2>
+    </div>
+    <a class="btn btn-outline-light rounded-pill" href="{{ '/catalogue.html' | relative_url }}">
+      Tout voir
+    </a>
+  </div>
+
+  {% assign sorted_products = site.products | sort: "title" %}
+
+  <div class="row g-4">
+    {% for product in sorted_products limit: 3 %}
+      <div class="col-12 col-md-6 col-xl-4">
+        {% include product-card.html product=product %}
+      </div>
+    {% endfor %}
+  </div>
 </section>
