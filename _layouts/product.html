@@ -2,11 +2,10 @@
 layout: default
 ---
 
-<article class="product-page container-fluid py-4 py-lg-5">
+<article class="product-page container-fluid py-2 py-lg-2">
+    <h1>{{ page.title }}</h1>
     <div class="product-hero product-hero-two-panels">
         <aside class="product-summary">
-            <h1>{{ page.title }}</h1>
-
             {% if page.gallery %}
                 <div class="product-gallery">
                     {% for image in page.gallery %}
@@ -28,63 +27,63 @@ layout: default
                 </div>
             {% endif %}
 
-            <div class="product-meta">
-                {% if page.prix %}
-                    <span class="price-badge">{{ page.prix }} €</span>
-                {% endif %}
+            <div class="product-info-grid">
+                <div class="product-details">
+                    {% if page.jeu %}
+                        <p><strong>Jeu :</strong> {{ page.jeu }}</p>
+                    {% endif %}
 
-                {% if page.materiau %}
-                    <span class="badge">{{ page.materiau }}</span>
-                {% endif %}
+                    {% if page.editeur %}
+                        <p><strong>Éditeur :</strong> {{ page.editeur }}</p>
+                    {% endif %}
 
-                {% if page.compatible %}
-                    <span class="badge">Compatible avec {{ page.compatible }}</span>
-                {% endif %}
-            </div>
+                    {% if page.annee_edition %}
+                        <p><strong>Année d’édition :</strong> {{ page.annee_edition }}</p>
+                    {% endif %}
 
-            <div class="product-details mt-4">
-                {% if page.jeu %}
-                    <p><strong>Jeu :</strong> {{ page.jeu }}</p>
-                {% endif %}
+                    {% if page.version_jeu %}
+                        <p><strong>Version :</strong> {{ page.version_jeu }}</p>
+                    {% endif %}
 
-                {% if page.editeur %}
-                    <p><strong>Éditeur :</strong> {{ page.editeur }}</p>
-                {% endif %}
+                    {% if page.pieces %}
+                        <p><strong>Pièces imprimées :</strong> {{ page.pieces }}</p>
+                    {% endif %}
 
-                {% if page.annee_edition %}
-                    <p><strong>Année d’édition :</strong> {{ page.annee_edition }}</p>
-                {% endif %}
+                    {% if page.temps_impression %}
+                        <p><strong>Temps d’impression :</strong> {{ page.temps_impression }}</p>
+                    {% endif %}
 
-                {% if page.version_jeu %}
-                    <p><strong>Version :</strong> {{ page.version_jeu }}</p>
-                {% endif %}
-
-                {% if page.pieces %}
-                    <p><strong>Pièces imprimées :</strong> {{ page.pieces }}</p>
-                {% endif %}
-
-                {% if page.temps_impression %}
-                    <p><strong>Temps d’impression :</strong> {{ page.temps_impression }}</p>
-                {% endif %}
-
-                {% if page.poids_filament %}
-                    <p><strong>Filament :</strong> {{ page.poids_filament }}</p>
-                {% endif %}
-            </div>
-
-            {% if page.tags %}
-                <div class="product-tags mt-3">
-                    {% for tag in page.tags %}
-                        <span class="badge rounded-pill text-bg-dark border">{{ tag }}</span>
-                    {% endfor %}
+                    {% if page.poids_filament %}
+                        <p><strong>Filament :</strong> {{ page.poids_filament }}</p>
+                    {% endif %}
                 </div>
-            {% endif %}
 
-            {% if page.commande_url %}
-                <a class="btn btn-primary rounded-pill px-4 mt-4" href="{{ page.commande_url | relative_url }}">
+                <div>
+                    <div class="product-details mt-4">
+                        {% if page.materiau %}
+                            <p><strong>Matière de l'insert :</strong> {{ page.materiau }}</p>
+                        {% endif %}
+
+                        {% if page.prix %}
+                            <p><strong>Prix de l'insert :</strong> {{ page.prix }} €</p>
+                        {% endif %}
+                    </div>
+
+                    {% if page.tags %}
+                        <div class="product-tags mt-3">
+                            {% for tag in page.tags %}
+                                <span class="badge rounded-pill text-bg-dark border">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- {% if page.commande_url %}
+                <a class="btn btn-primary rounded-pill px-4 my-4" href="{{ page.commande_url | relative_url }}">
                     Commander
                 </a>
-            {% endif %}
+            {% endif %} -->
 
             {% if page.description_longue %}
                 <section class="product-section">
