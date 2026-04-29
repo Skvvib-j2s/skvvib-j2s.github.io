@@ -2,30 +2,30 @@
 layout: default
 ---
 
-<article class="product-page py-4 py-lg-5">
-    <div class="product-hero">
+<article class="product-page container-fluid py-4 py-lg-5">
+    <div class="product-hero product-hero-two-panels">
         <aside class="product-summary">
-            
-
             <h1>{{ page.title }}</h1>
 
-            <div>
-                {% if page.gallery %}
-                    <div class="product-gallery">
-                        {% for image in page.gallery %}
-                            <img
-                                src="{{ image | relative_url }}"
-                                alt="{{ page.title }} - vue {{ forloop.index }}"
-                                width="800"
-                                height="600"
-                                loading="lazy">
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            </div>
-
-            {% if page.categorie %}
-                <span class="eyebrow">{{ page.categorie }}</span>
+            {% if page.gallery %}
+                <div class="product-gallery">
+                    {% for image in page.gallery %}
+                        <img
+                            src="{{ image | relative_url }}"
+                            alt="{{ page.title }} - vue {{ forloop.index }}"
+                            width="800"
+                            height="600"
+                            loading="lazy">
+                    {% endfor %}
+                </div>
+            {% elsif page.image %}
+                <div class="product-main-image">
+                    <img
+                        src="{{ page.image | relative_url }}"
+                        alt="{{ page.title }}"
+                        width="1200"
+                        height="900">
+                </div>
             {% endif %}
 
             <div class="product-meta">
@@ -86,9 +86,58 @@ layout: default
                 </a>
             {% endif %}
 
-            <div class="product-content mt-4">
-                {{ content }}
-            </div>
+            {% if page.description_longue %}
+                <section class="product-section">
+                    <h5>Description</h5>
+                    <p>{{ page.description_longue }}</p>
+                </section>
+            {% endif %}
+        </aside>
+
+        <aside class="product-summary product-detail-panel">
+            {% if page.composition %}
+                <section class="product-section">
+                    <h5>Composition</h5>
+                    <ul>
+                        {% for item in page.composition %}
+                            <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endif %}
+
+            {% if page.caracteristiques %}
+                <section class="product-section">
+                    <h5>Caractéristiques</h5>
+                    <ul>
+                        {% for item in page.caracteristiques %}
+                            <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endif %}
+
+            {% if page.compatibilite %}
+                <section class="product-section">
+                    <h5>Compatibilité</h5>
+                    <ul>
+                        {% for item in page.compatibilite %}
+                            <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endif %}
+
+            {% if page.informations_importantes %}
+                <section class="product-section">
+                    <h5>Informations importantes</h5>
+                    <ul>
+                        {% for item in page.informations_importantes %}
+                            <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endif %}
         </aside>
     </div>
 </article>
