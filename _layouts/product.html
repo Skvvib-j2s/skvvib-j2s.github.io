@@ -9,12 +9,24 @@ layout: default
             {% if page.gallery %}
                 <div class="product-gallery">
                     {% for image in page.gallery %}
-                        <img
+                        <!-- <img
                             src="{{ image | relative_url }}"
                             alt="{{ page.title }} - vue {{ forloop.index }}"
                             width="800"
                             height="600"
-                            loading="lazy">
+                            loading="lazy"> -->
+                        <button
+                            class="product-gallery__button"
+                            type="button"
+                            data-full-image="{{ image | relative_url }}"
+                            data-image-alt="{{ page.title }} - vue {{ forloop.index }}">
+                            <img
+                                src="{{ image | relative_url }}"
+                                alt="{{ page.title }} - vue {{ forloop.index }}"
+                                width="800"
+                                height="600"
+                                loading="lazy">
+                        </button>
                     {% endfor %}
                 </div>
             {% elsif page.image %}
@@ -41,9 +53,9 @@ layout: default
                         <p><strong>Année d’édition :</strong> {{ page.annee_edition }}</p>
                     {% endif %}
 
-                    {% if page.version_jeu %}
+                    <!-- {% if page.version_jeu %}
                         <p><strong>Version :</strong> {{ page.version_jeu }}</p>
-                    {% endif %}
+                    {% endif %} -->
 
                     {% if page.pieces %}
                         <p><strong>Pièces imprimées :</strong> {{ page.pieces }}</p>
@@ -139,4 +151,64 @@ layout: default
             {% endif %}
         </aside>
     </div>
+    <div class="image-modal" id="imageModal" aria-hidden="true">
+        <button class="image-modal__close" type="button" aria-label="Fermer l’image agrandie">
+            ×
+        </button>
+
+        <img class="image-modal__image" src="" alt="">
+    </div>
 </article>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("imageModal");
+
+        if (!modal) {
+            return;
+        }
+
+        const modalImage = modal.querySelector(".image-modal__image");
+        const closeButton = modal.querySelector(".image-modal__close");
+        const imageButtons = document.querySelectorAll(".product-gallery__button");
+
+        function openModal(src, alt) {
+            modalImage.src = src;
+            modalImage.alt = alt || "";
+            modal.classList.add("is-open");
+            modal.setAttribute("aria-hidden", "false");
+            closeButton.focus();
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+            modal.classList.remove("is-open");
+            modal.setAttribute("aria-hidden", "true");
+            modalImage.src = "";
+            modalImage.alt = "";
+            document.body.style.overflow = "";
+        }
+
+        imageButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                openModal(
+                    button.dataset.fullImage,
+                    button.dataset.imageAlt
+                );
+            });
+        });
+
+        closeButton.addEventListener("click", closeModal);
+
+        modal.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && modal.classList.contains("is-open")) {
+                closeModal();
+            }
+        });
+    });
+</script>

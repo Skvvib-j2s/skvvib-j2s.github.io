@@ -22,92 +22,13 @@
         Aller au contenu
     </a>
 
-    <header class="site-header border-bottom">
-        <nav class="navbar navbar-expand-lg navbar-dark py-2">
-            <div class="container">
-                <a class="navbar-brand fw-bold d-flex align-items-center gap-4" href="{{ '/' | relative_url }}">
-                    <span class="brand-badge">{{ site.title }}</span>
-                </a>
-
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNav"
-                    aria-controls="mainNav"
-                    aria-expanded="false"
-                    aria-label="Ouvrir la navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav ms-auto align-items-lg-center gap-4">
-                        <li class="nav-item">
-                            <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">
-                                Accueil
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link {% if page.url == '/catalogue.html' %}active{% endif %}" href="{{ '/catalogue.html' | relative_url }}">
-                                Catalogue
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link {% if page.url == '/a-propos.html' %}active{% endif %}" href="{{ '/a-propos.html' | relative_url }}">
-                                À propos
-                            </a>
-                        </li>
-
-                        <li class="nav-item d-lg-none">
-                            <a class="nav-link {% if page.url == '/contact.html' %}active{% endif %}" href="{{ '/contact.html' | relative_url }}">
-                                Contact
-                            </a>
-                        </li>
-
-                        <li class="nav-item mt-4 mt-lg-0 d-none d-lg-block">
-                            <a class="btn btn-primary rounded-pill px-4" href="{{ '/contact.html' | relative_url }}">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    {% include header.html %}
 
     <main class="{% if page.layout == 'product' %}main-product{% else %}container{% endif %}">
         {{ content }}
     </main>
 
-    <footer class="py-3 border-top mt-5">
-        <div class="container">
-            <div class="row g-4 align-items-start">
-                <div class="col-12 col-md-7">
-                    <p class="fw-semibold mb-4">{{ site.title }}</p>
-                    <p class="text-secondary mb-0">{{ site.description }}</p>
-                </div>
-
-                <div class="col-12 col-md-5">
-                    <ul class="list-unstyled d-flex flex-line gap-4 mb-0">
-                        <li>
-                            <a class="footer-link" href="{{ '/' | relative_url }}">Accueil</a>
-                        </li>
-                        <li>
-                            <a class="footer-link" href="{{ '/catalogue.html' | relative_url }}">Catalogue</a>
-                        </li>
-                        <li>
-                            <a class="footer-link" href="{{ '/a-propos.html' | relative_url }}">À propos</a>
-                        </li>
-                        <li>
-                            <a class="footer-link" href="{{ '/contact.html' | relative_url }}">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% include footer.html %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

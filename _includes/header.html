@@ -1,0 +1,54 @@
+<header class="site-header border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark py-2">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-4" href="{{ '/' | relative_url }}">
+                <span class="brand-badge">{{ site.title }}</span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
+                aria-expanded="false"
+                aria-label="Ouvrir la navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">
+                            Accueil
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/catalogue.html' %}active{% endif %}" href="{{ '/catalogue.html' | relative_url }}">
+                            Catalogue
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/a-propos.html' %}active{% endif %}" href="{{ '/a-propos.html' | relative_url }}">
+                            À propos
+                        </a>
+                    </li>
+
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link {% if page.url == '/contact.html' %}active{% endif %}" href="{{ '/contact.html' | relative_url }}">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item mt-4 mt-lg-0 d-none d-lg-block">
+                        <a class="btn btn-primary rounded-pill px-4" href="{{ '/contact.html' | relative_url }}">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
