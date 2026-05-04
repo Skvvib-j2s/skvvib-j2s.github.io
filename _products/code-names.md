@@ -72,4 +72,8 @@ informations_importantes:
   - "Composants non inclus."
   - "Produit non officiel compatible avec Code Names."
   - "Les marques et noms de jeux appartiennent à leurs propriétaires respectifs."
+
+layout: product
+leboncoin_url: "https://www.leboncoin.fr/ad/jeux_jouets/3183221944"
+vinted_url: "https://www.vinted.fr/items/8705323839-insert-code-names-imprime-en-3d"
 ---

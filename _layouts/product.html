@@ -89,6 +89,20 @@ layout: default
                         </div>
                     {% endif %}
                 </div>
+
+                <div class="platform-links">
+                    {% if page.leboncoin_url %}
+                        <a href="{{ page.leboncoin_url }}" target="_blank" rel="noopener">
+                        Voir sur LeBonCoin
+                        </a>
+                    {% endif %}
+
+                    {% if page.vinted_url %}
+                        <a href="{{ page.vinted_url }}" target="_blank" rel="noopener">
+                        Voir sur Vinted
+                        </a>
+                    {% endif %}
+                </div>
             </div>
 
             <!-- {% if page.commande_url %}
