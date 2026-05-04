@@ -10,22 +10,14 @@ editeur: "Iello"
 annee_edition: 2016
 version_jeu: "2016"
 pieces: 4
-<<<<<<< HEAD
-temps_impression: "3 h"
-poids_filament: "150 g"
+temps_impression: "151 min"
+poids_filament: "78 g"
 image: "/assets/images/code-names/01_preview.webp"
 gallery:
   - "/assets/images/code-names/01_preview.webp"
   - "/assets/images/code-names/02.webp"
   - "/assets/images/code-names/03.webp"
   - "/assets/images/code-names/04.webp"
-=======
-temps_impression: "151 min"
-poids_filament: "78 g"
-image: "/assets/images/code-names/01_preview.webp"
-gallery:
-  - "/assets/images/code-names/01_preview.webp"
->>>>>>> 8cc4e73 (màj code names)
 commande_url: "/contact/"
 tags:
   - "insert 3D"
