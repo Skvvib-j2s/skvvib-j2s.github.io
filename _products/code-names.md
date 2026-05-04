@@ -3,13 +3,14 @@ title: "Insert 3D compatible avec Code Names"
 jeu: "Code Names"
 description: "Insert imprimé en 3D compatible avec Code Names, composé de 4 modules indépendants pour organiser les cartes Nom de Code, les cartes Clé et les tuiles."
 categorie: "Insert de jeu de société"
-prix: 6
+prix: 4
 materiau: "PLA"
 compatible: "Code Names"
 editeur: "Iello"
 annee_edition: 2016
 version_jeu: "2016"
 pieces: 4
+<<<<<<< HEAD
 temps_impression: "3 h"
 poids_filament: "150 g"
 image: "/assets/images/code-names/01_preview.webp"
@@ -18,6 +19,13 @@ gallery:
   - "/assets/images/code-names/02.webp"
   - "/assets/images/code-names/03.webp"
   - "/assets/images/code-names/04.webp"
+=======
+temps_impression: "151 min"
+poids_filament: "78 g"
+image: "/assets/images/code-names/01_preview.webp"
+gallery:
+  - "/assets/images/code-names/01_preview.webp"
+>>>>>>> 8cc4e73 (màj code names)
 commande_url: "/contact/"
 tags:
   - "insert 3D"
@@ -50,8 +58,8 @@ caracteristiques:
   - "Modules indépendants, sans assemblage entre eux."
   - "Modules amovibles et utilisables directement sur la table."
   - "Impression prévue sans support."
-  - "Temps d'impression estimé : 3 h."
-  - "Poids filament estimé : 150 g."
+  - "Temps d'impression estimé : 151 min."
+  - "Poids filament estimé : 78 g."
 
 compatibilite:
   - "Compatible avec Code Names."
@@ -60,6 +68,7 @@ compatibilite:
   - "Extensions incluses : aucune."
   - "Compatibilité extensions : [À vérifier]."
   - "Rangement vertical souhaité : [À vérifier par test de fermeture]."
+
 
 informations_importantes:
   - "Jeu non inclus."
