@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="classique">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,13 @@
     <link
         rel="stylesheet"
         href="{{ '/assets/css/style.css' | relative_url }}">
+    <!-- <script>
+        const savedTheme = localStorage.getItem("site-theme");
+
+        if (savedTheme) {
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        }
+    </script> -->
 </head>
 <body class="site-body">
     <a href="{{ '/' | relative_url }}" class="back-home" title="Retour à l'accueil">
