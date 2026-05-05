@@ -377,6 +377,7 @@ img {
   top: 1rem;
   left: 1rem;
   z-index: 1000;
+  cursor: pointer;
 
   width: 42px;
   height: 42px;
