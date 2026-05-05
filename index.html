@@ -58,10 +58,10 @@ description: Inserts imprimés en 3D pour jeux de société.
         </a>
     </div>
 
-    {% assign sorted_products = site.products | sort: "title" %}
+    {% assign derniers_inserts = site.products | sort: "date_ajout" | reverse %}
 
     <div class="row g-4">
-        {% for product in sorted_products limit: 3 %}
+        {% for product in derniers_inserts limit: 3 %}
             <div class="col-12 col-md-6 col-xl-4">
                 {% include product-card.html product=product %}
             </div>

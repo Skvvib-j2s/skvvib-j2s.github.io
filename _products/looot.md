@@ -1,4 +1,5 @@
 ---
+date_ajout: "2026-04-28"
 title: "Insert 3D compatible avec Looot"
 jeu: "Looot"
 description: "Insert imprimé en 3D compatible avec Looot, composé de 13 modules indépendants pour organiser les clans, ressources, bâtiments et bonus militaires."

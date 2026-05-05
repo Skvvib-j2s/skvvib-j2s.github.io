@@ -1,4 +1,5 @@
 ---
+date_ajout: "2026-05-01"
 title: "Insert 3D compatible avec Code Names"
 jeu: "Code Names"
 description: "Insert imprimé en 3D compatible avec Code Names, composé de 4 modules indépendants pour organiser les cartes Nom de Code, les cartes Clé et les tuiles."

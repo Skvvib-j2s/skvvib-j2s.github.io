@@ -1,4 +1,5 @@
 ---
+date_ajout: "2026-05-04"
 title: "Insert 3D compatible avec Nidavellir"
 jeu: "Nidavellir"
 description: "Insert imprimé en 3D compatible avec Nidavellir, composé de 15 modules indépendants pour organiser les cartes sleevées, les pièces, les gemmes et le Trésor Royal."
