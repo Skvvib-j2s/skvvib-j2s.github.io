@@ -25,9 +25,10 @@ image: "/assets/images/chateau-combo/01_preview.webp"
 
 gallery:
   - "/assets/images/chateau-combo/01_preview.webp"
-  - "/assets/images/chateau-combo/02_vue.webp"
-  - "/assets/images/chateau-combo/03_vue.webp"
-  - "/assets/images/chateau-combo/04_vue.webp"
+  - "/assets/images/chateau-combo/02.webp"
+  - "/assets/images/chateau-combo/03.webp"
+  - "/assets/images/chateau-combo/04.webp"
+  - "/assets/images/chateau-combo/05.webp"
 
 commande_url: "/contact/"
 
