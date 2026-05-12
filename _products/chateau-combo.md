@@ -1,7 +1,8 @@
 ---
 date_ajout: "2026-05-12"
+title: "Insert 3D compatible avec Château Combo"
 jeu: "Château Combo"
-description: "Inserts modulaires pour Château Combo"
+description: "Insert imprimé en 3D compatible avec Château Combo, composé de 4 modules indépendants pour organiser les cartes village, les cartes château et les jetons."
 categorie: "Insert de jeu de société"
 prix: 4
 materiau: "PLA"
@@ -40,8 +41,8 @@ caracteristiques:
   - "Modules indépendants, sans assemblage entre eux."
   - "Modules amovibles et utilisables directement sur la table."
   - "Impression prévue sans support."
-  - "Temps d'impression estimé : 222min."
-  - "Poids filament estimé : 88 g."
+  - "Temps d'impression estimé : 221min."
+  - "Poids filament estimé : 88g."
 
 compatibilite:
   - "Compatible avec Château Combo"
