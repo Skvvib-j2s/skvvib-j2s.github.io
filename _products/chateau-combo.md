@@ -1,5 +1,5 @@
 ---
-date_ajout: 2026-05-12
+date_ajout: "2026-05-12"
 jeu: "Château Combo"
 description: "Inserts modulaires pour Château Combo"
 categorie: "Insert de jeu de société"
