@@ -4,7 +4,7 @@ title: "Insert 3D compatible avec Château Combo"
 jeu: "Château Combo"
 description: "Insert imprimé en 3D compatible avec Château Combo, composé de 4 modules indépendants pour organiser les cartes village, les cartes château et les jetons."
 categorie: "Insert de jeu de société"
-prix: 4
+prix: 5.5
 materiau: "PLA"
 editeur: "Catch Up Games"
 annee_edition: "2024"
