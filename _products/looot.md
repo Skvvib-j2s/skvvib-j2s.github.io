@@ -1,4 +1,4 @@
----
+<!-- ---
 date_ajout: "2026-04-28"
 title: "Insert 3D compatible avec Looot"
 jeu: "Looot"
@@ -84,4 +84,4 @@ informations_importantes:
 layout: product
 leboncoin_url: "https://www.leboncoin.fr/ad/jeux_jouets/3142848556"
 vinted_url: "https://www.vinted.fr/items/8145691848-insert-looot-imprime-en-3d"
----
+--- -->
